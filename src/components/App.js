@@ -1,5 +1,6 @@
 // ===============================================================
 // This component handles the App template used on every page.
+// This can be considered the 'Root' of the app.
 // ===============================================================
 
 import React, {PropTypes} from 'react';
@@ -16,6 +17,8 @@ class App extends React.Component {
     }
 }
 
+// If a component makes use of props, it should have its propTypes
+// defined like so.
 App.propTypes = {
     children: PropTypes.object.isRequired
 };

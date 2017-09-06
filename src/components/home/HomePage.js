@@ -1,3 +1,8 @@
+// ============================================================
+// Page component should be 'dumb'. These presentational choose
+// their UI based on the data they get handed down from props.
+// ============================================================
+
 import React from 'react';
 import {Link} from 'react-router';
 

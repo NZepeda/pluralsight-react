@@ -9,10 +9,13 @@ class CoursesPage extends React.Component {
             course: {title:""}
         };
 
+        // If you have any functions, they should get binded to the component
+        // in the constructor.
 
         this.onTitleChange = this.onTitleChange.bind(this);
         this.onClickSave = this.onClickSave.bind(this);
     }
+    
     // This will fire every time the user updates the field
     onTitleChange(event){
         const course = this.state.course;

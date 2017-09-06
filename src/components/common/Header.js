@@ -1,6 +1,14 @@
+// ====================================================================
+// It is generally good practice to have 'common' components. These 
+// components are typically used sitewide. 
+// ====================================================================
+
 import React, {PropTypes} from 'react';
 import {Link, IndexLink} from 'react-router';
 
+
+// An IndexLink is a like a Link, except it is only active when the current route is exactly the 
+// linked route. It is equivalent to the <Link> with the onlyActiveOnIndex prop set.
 const Header = () => {
     return(
         <nav>
