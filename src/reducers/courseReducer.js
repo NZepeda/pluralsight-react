@@ -1,3 +1,4 @@
+import * as types from '../actions/actionTypes';
 // =============================================================
 // Reducers are pure functions that get handed the previous and a
 // function and returns the next state. The same state or a 
@@ -16,7 +17,7 @@ export default function courseReducer(state = [], action){
         case 'undefined' :
             return initialState;
 
-        case 'CREATE_COURSE' :
+        case types.CREATE_COURSE :
             return [...state,
                 Object.assign({}, action.course)];
 
