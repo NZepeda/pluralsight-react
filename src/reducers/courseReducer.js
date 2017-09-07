@@ -17,9 +17,8 @@ export default function courseReducer(state = [], action){
         case 'undefined' :
             return initialState;
 
-        case types.CREATE_COURSE :
-            return [...state,
-                Object.assign({}, action.course)];
+        case types.LOAD_COURSES_SUCCESS:
+            return action.courses;
 
         default: 
             return state;
