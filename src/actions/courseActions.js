@@ -10,7 +10,7 @@
 // being performed.
 import * as types from './actionTypes';
 import courseApi from '../api/mockCourseApi';
-
+import {beginAjaxCall, ajaxCallError} from './ajaxStatusActions';
 // **** This is technically not an action but an 'Action Creator' because it does just that.
 // **** It creates an action.
 export function loadCoursesSuccess(courses){
@@ -27,9 +27,11 @@ export function updateCourseSuccess(course) {
 
 export function loadCourses(){
     return function(dispatch){
+        dispatch(beginAjaxCall());
         return courseApi.getAllCourses().then(courses => {
             dispatch(loadCoursesSuccess(courses));
         }).catch(error => {
+            dispatch(ajaxCallError());
             throw(error);
         });
     };
@@ -41,6 +43,7 @@ export function saveCourse(course){
             course.id ? dispatch(updateCourseSuccess(savedCourse)) :
                 dispatch(createCourseSuccess(savedCourse));
         }).catch(error => {
+            dispatch(ajaxCallError(error));
             throw(error);
         });
     };

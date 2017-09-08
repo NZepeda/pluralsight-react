@@ -5,3 +5,7 @@ export const UPDATE_COURSE_SUCCESS = 'UPDATE_COURSE_SUCCESS';
 
 // **************** Author Types ***************** //
 export const LOAD_AUTHORS_SUCCESS = 'LOAD_AUTHORS_SUCCESS';
+
+// **************** Other Types ***************** //
+export const BEGIN_AJAX_CALL = 'BEGIN_AJAX_CALL';
+export const AJAX_CALL_ERROR = 'AJAX_CALL_ERROR';
